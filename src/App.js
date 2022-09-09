@@ -57,8 +57,11 @@ function App() {
       >
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<PageOne data={search(data)} />} />
-            <Route path="/pageTwo" element={<PageTwo data={search2(data)} />} />
+            <Route path="/mr_test" element={<PageOne data={search(data)} />} />
+            <Route
+              path="/mr_test/pageTwo"
+              element={<PageTwo data={search2(data)} />}
+            />
           </Routes>
         </BrowserRouter>
       </DataContext.Provider>

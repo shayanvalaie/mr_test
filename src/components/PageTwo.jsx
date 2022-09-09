@@ -28,7 +28,7 @@ const PageTwo = ({ data }) => {
             borderColor: "white",
           }}
         />
-        <Link style={{ textDecoration: "none" }} to="/">
+        <Link style={{ textDecoration: "none" }} to="/mr_test">
           <Button
             id="buttonHover"
             sx={{
