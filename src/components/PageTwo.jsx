@@ -45,34 +45,36 @@ const PageTwo = ({ data }) => {
         </Link>
       </div>
 
-      <TableContainer component={Paper}>
-        <Table
-          sx={{ minWidth: 650, backgroundColor: "#414a4c" }}
-          aria-label="simple table"
-        >
-          <TableHead>
-            <TableRow>
-              <TableCell align="center"> userId</TableCell>
-              <TableCell align="center">Title</TableCell>
-              <TableCell align="center">Completed</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {data.map((person) => (
-              <TableRow
-                key={person.id}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-              >
-                <TableCell align="center">{person.userId}</TableCell>
-                <TableCell align="center">{person.title}</TableCell>
-                <TableCell align="center">
-                  {person.completed ? "true" : "false"}
-                </TableCell>
+      <div className="container">
+        <TableContainer component={Paper}>
+          <Table
+            sx={{ minWidth: 650, backgroundColor: "#414a4c" }}
+            aria-label="simple table"
+          >
+            <TableHead>
+              <TableRow>
+                <TableCell align="center"> userId</TableCell>
+                <TableCell align="center">Title</TableCell>
+                <TableCell align="center">Completed</TableCell>
               </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
+            </TableHead>
+            <TableBody>
+              {data.map((person) => (
+                <TableRow
+                  key={person.id}
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                >
+                  <TableCell align="center">{person.userId}</TableCell>
+                  <TableCell align="center">{person.title}</TableCell>
+                  <TableCell align="center">
+                    {person.completed ? "true" : "false"}
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </div>
     </>
   );
 };

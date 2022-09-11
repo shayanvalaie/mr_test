@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { DataContext } from "./DataContext";
 import axios from "axios";
-
+import "./App.css";
 import PageOne from "./components/PageOne";
 import PageTwo from "./components/PageTwo";
 
