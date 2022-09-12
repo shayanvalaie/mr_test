@@ -25,23 +25,21 @@ function App() {
 
   // Filtering/Searching function
   function search(rows) {
-    const columns = rows[0] && Object.keys(rows[0]);
-    return rows.filter((row) =>
-      columns.some(
-        (column) =>
-          row[column].toString().toLowerCase().indexOf(q.toLowerCase()) > -1
-      )
+    return rows.filter(
+      (row) =>
+        row.title.toLowerCase().indexOf(q.toLowerCase()) > -1 ||
+        row.userId == q ||
+        row.completed.toString().toLowerCase().indexOf(q.toLowerCase()) > -1
     );
   }
 
   // Filtering/Searching Function Page 2
   function search2(rows) {
-    const columns = rows[0] && Object.keys(rows[0]);
-    return rows.filter((row) =>
-      columns.some(
-        (column) =>
-          row[column].toString().toLowerCase().indexOf(q2.toLowerCase()) > -1
-      )
+    return rows.filter(
+      (row) =>
+        row.title.toLowerCase().indexOf(q2.toLowerCase()) > -1 ||
+        row.userId == q2 ||
+        row.completed.toString().toLowerCase().indexOf(q2.toLowerCase()) > -1
     );
   }
 
@@ -70,3 +68,11 @@ function App() {
 }
 
 export default App;
+
+// const columns = rows[0] && Object.keys(rows[0]);
+// return rows.filter((row) =>
+//   columns.some(
+//     (column) =>
+//       row[column].toString().toLowerCase().indexOf(q.toLowerCase()) > -1
+//   )
+// );

@@ -21,7 +21,7 @@ const PageTwo = ({ data }) => {
           id="outlined-basic"
           value={q2}
           onChange={(e) => setQ2(e.target.value)}
-          label="Title/Completed"
+          label="Search..."
           variant="outlined"
           color="secondary"
           sx={{

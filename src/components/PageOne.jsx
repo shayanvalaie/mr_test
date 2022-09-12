@@ -11,7 +11,6 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
-import Grid from "@mui/material/Grid";
 
 const PageOne = ({ data }) => {
   const { q, setQ } = useContext(DataContext);
@@ -23,7 +22,7 @@ const PageOne = ({ data }) => {
           id="outlined-basic"
           value={q}
           onChange={(e) => setQ(e.target.value)}
-          label="Title/Completed"
+          label="Search..."
           variant="outlined"
           color="secondary"
           sx={{
